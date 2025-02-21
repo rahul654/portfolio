@@ -44,7 +44,7 @@ function Projects() {
               {globalState?.data?.projects?.map((val, index) => {
                 return <Col md={4} className="project-card">
                   <ProjectCard
-                    imgPath={imgObj[index+1]}
+                    imgPath={globalState?.data?.['imagesLink']?.[`project${index+1}`] || imgObj[index+1]}
                     title={val?.title}
                     description={val?.description}
                     ghLink={val?.githubLink}
